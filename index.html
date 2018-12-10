@@ -1,0 +1,503 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long-Scrolling site</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/backtotop.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+
+    <style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9, .bgimg-10,
+ .bgimg-11, .bgimg-12, .bgimg-13, .bgimg-14, .bgimg-15, .bgimg-16, .bgimg-17, .bgimg-18, .bgimg-19,
+  .bgimg-20, .bgimg-21, .bgimg-22, .bgimg-23, .bgimg-24, .bgimg-25, .bgimg-26, .bgimg-27, .bgimg-28{
+  position: relative;
+  opacity: 0.90;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url("img/1.jpg");
+  min-height: 1000px;
+}
+.bgimg-2 {
+  background-image: url("img/2.jpg");
+  min-height: 1000px;
+}
+.bgimg-3 {
+  background-image: url("img/3.jpg");
+  min-height: 1000px;
+}
+.bgimg-4 {
+  background-image: url("img/4.jpg");
+  min-height: 1000px;
+}
+.bgimg-5 {
+  background-image: url("img/5.jpg");
+  min-height: 1000px;
+}
+.bgimg-6 {
+  background-image: url("img/6.jpg");
+  min-height: 1000px;
+}
+.bgimg-7 {
+  background-image: url("img/7.jpg");
+  min-height: 1000px;
+}
+.bgimg-8 {
+  background-image: url("img/8.jpg");
+  min-height: 1000px;
+}
+.bgimg-9 {
+  background-image: url("img/9.jpg");
+  min-height: 1000px;
+}
+.bgimg-10 {
+  background-image: url("img/10.jpg");
+  min-height: 1000px;
+}
+.bgimg-11 {
+  background-image: url("img/11.jpg");
+  min-height: 1000px;
+}
+.bgimg-12 {
+  background-image: url("img/12.jpg");
+  min-height: 1000px;
+}
+.bgimg-13 {
+  background-image: url("img/13.jpg");
+  min-height: 1000px;
+}
+.bgimg-14 {
+  background-image: url("img/14.jpg");
+  min-height: 1000px;
+}
+.bgimg-15 {
+  background-image: url("img/15.jpg");
+  min-height: 1000px;
+}
+.bgimg-16 {
+  background-image: url("img/16.jpg");
+  min-height: 1000px;
+}
+.bgimg-17 {
+  background-image: url("img/17.jpg");
+  min-height: 1000px;
+}
+.bgimg-18 {
+  background-image: url("img/18.jpg");
+  min-height: 1000px;
+}
+.bgimg-19 {
+  background-image: url("img/19.jpg");
+  min-height: 1000px;
+}
+.bgimg-20 {
+  background-image: url("img/20.jpg");
+  min-height: 1000px;
+}
+.bgimg-21 {
+  background-image: url("img/21.jpg");
+  min-height: 1000px;
+}
+.bgimg-22 {
+  background-image: url("img/22.jpg");
+  min-height: 1000px;
+}
+.bgimg-23 {
+  background-image: url("img/23.jpg");
+  min-height: 1000px;
+}
+.bgimg-24 {
+  background-image: url("img/24.jpg");
+  min-height: 1000px;
+}
+.bgimg-25 {
+  background-image: url("img/25.jpg");
+  min-height: 1000px;
+}
+.bgimg-26 {
+  background-image: url("img/26.jpg");
+  min-height: 1000px;
+}
+.bgimg-27 {
+  background-image: url("img/27.jpg");
+  min-height: 1000px;
+}
+.bgimg-28 {
+  background-image: url("img/28.jpg");
+  min-height: 1000px;
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.caption span.border {
+  background-color: #ffff;
+  color: #000000
+  padding: 100px;
+  font-size: 50px;
+  letter-spacing: 25px;
+}
+p {
+  letter-spacing: 3px;
+  font: 16px "Lato", sans-serif;
+  color: #000000;
+  /* white */
+}
+h2 {
+  letter-spacing: 3px;
+  font: 40px "Lato", sans-serif;
+  color: #000000;
+  /* black */
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9, .bgimg-10,
+   .bgimg-11, .bgimg-12, .bgimg-13, .bgimg-14, .bgimg-15, .bgimg-16, .bgimg-17, .bgimg-18, .bgimg-19,
+    .bgimg-20, .bgimg-21, .bgimg-22, .bgimg-23, .bgimg-24, .bgimg-25, .bgimg-26, .bgimg-27, .bgimg-28{
+        background-attachment: scroll;}}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">History of Photography</span>
+  </div>
+</div>
+<div style="color: #777;background-color:#F1F0F0;text-align:center;padding:250px 80px;text-align: justify;">
+  <h2 style="text-align:center;"></h2>
+    <!-- <div id="transcroller-body" class="aos-all"></div> -->
+    <div class="aos-item" data-aos="slide-right">
+    <!-- <div class="aos-item__inner"></div> -->
+  <h2>History</h2>
+  <p>Nikon Corporation was established on 25 July 1917 when three leading optical manufacturers merged to form a comprehensive, fully integrated optical company known as Nippon Kōgaku Tōkyō K.K. Over the next sixty years, this growing company became a manufacturer of optical lenses (including those for the first Canon cameras) and equipment used in cameras, binoculars, microscopes and inspection equipment. During World War II the company operated thirty factories with 2,000 employees, manufacturing binoculars, lenses, bomb sights, and periscopes for the Japanese military.</p>
+</div>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<!-- <div style="position:relative;"> -->
+  <div style="color:#777;background-color:#0084FF;text-align:center;padding:250px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-left">
+
+    <!-- <div class="aos-item__outer"></div> -->
+    <h2>Names and brands</h2>
+    <p>Founded in 1917 as Nippon Kōgaku Kōgyō Kabushikigaisha (日本光学工業株式会社 "Japan Optical Industries Corporation"), the company was renamed Nikon Corporation, after its cameras, in 1988. The name Nikon, which dates from 1946, sounds like a merging of Nippon Kōgaku (日本光学: "Japan Optical") and Zeiss's brand Ikon. This would cause some early problems in Germany as Zeiss complained that Nikon violated its trademarked camera. From 1963 to 1968 the Nikon F in particular was therefore labeled 'Nikkor'.
+</p>
+  </div>
+</div>
+
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#F1F0F0;text-align:center;padding:250px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-right">
+    <h2>Rise of the Nikon F series</h2>
+    <p>The Nikon SP and other 1950s and 1960s rangefinder cameras competed directly with models from Leica and Zeiss. However, the company quickly ceased developing its rangefinder line to focus its efforts on the Nikon F single-lens reflex line of cameras, which was successful upon its introduction in 1959. For nearly 30 years, Nikon's F-series SLRs were the most widely used small-format cameras among professional photographers as well as by the U.S. space program.
+</p>
+  </div>
+</div>
+
+<div class="bgimg-4">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color#777;background-color:#0084FF;text-align:center;padding:250px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-left">
+    <h2>Auto Focus problems..Oops!</h2></div>
+    <p>Despite introducing one of the first autofocus models, the slow and bulky F3AF, the company's determination to maintain lens compatibility with its F-mount prevented rapid advances in autofocus technology. Canon introduced a new type of lens-camera interface with its entirely electronic Canon EOS cameras and Canon EF lens mount in 1987. The much faster lens performance permitted by Canon's electronic focusing and aperture control prompted many professional photographers (especially in sports and news) to switch to the Canon system through the 1990s.</p>
+  </div>
+</div>
+
+<div class="bgimg-5">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#F1F0F0;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-right">
+    <h2>Digital photography</h2>
+    <p>Nikon created some of the first digital SLRs (DSLRs, Nikon NASA F4) for NASA, used in the Space Shuttle since 1991. After a 1990s partnership with Kodak to produce digital SLR cameras based on existing Nikon film bodies, Nikon released the Nikon D1 SLR under its own name in 1999. Although it used an APS-C-size light sensor only 2/3 the size of a 35 mm film frame (later called a "DX sensor"), the D1 was among the first digital cameras to have sufficient image quality and a low enough price for some professionals (particularly photojournalists and sports photographers) to use it as a replacement for a film SLR. The company also has a Coolpix line which grew as consumer digital photography became increasingly prevalent through the early 2000s.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bgimg-6">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color#777;background-color:#0084FF;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-left">
+    <h2>Film Camera Production</h2>
+    <p>Once Nikon introduced affordable consumer-level DSLRs such as the Nikon D70 in the mid-2000s, sales of its consumer and professional film cameras fell rapidly, following the general trend in the industry. In January 2006, Nikon announced it would stop making most of its film camera models and all of its large format lenses, and focus on digital models. Nevertheless, Nikon is the only major camera manufacturer still making film SLRs. The remaining model is the professional Nikon F6 with the last amateur model, FM10, having been discontinued.</p>
+  </div>
+  </div>
+</div>
+
+<div class="bgimg-7">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#F1F0F0;text-align:center;padding:250px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-right">
+    <h2>Movie Camera Production</h2>
+    <p>Although few models were introduced, Nikon made movie cameras as well. The R10 and R8 SUPER ZOOM Super 8 models (introduced in 1973) were the top of the line and last attempt for the amateur movie field. The cameras had a special gate and claw system to improve image steadiness and overcome a major drawback of Super 8 cartridge design. The R10 model has a high speed 10X macro zoom lens.
+
+Contrary to other brands, Nikon never attempted to offer projectors or their accessories.</p>
+  </div>
+</div>
+</div>
+
+<div class="bgimg-8">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color#777;background-color:#0084FF;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-left">
+    <h2>Single-Lens Reflex Camera</h2>
+    <p>A single-lens reflex camera (SLR) is a camera that typically uses a mirror and prism system (hence "reflex" from the mirror's reflection) that permits the photographer to view through the lens and see exactly what will be captured. With twin lens reflex and rangefinder cameras, the viewed image could be significantly different from the final image. When the shutter button is pressed on most SLRs, the mirror flips out of the light path, allowing light to pass through to the light receptor and the image to be captured.</P>
+  </div>
+  </div>
+</div>
+
+<div class="bgimg-9">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#F1F0F0;text-align:center;padding:50px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-right">
+    <h2>Through the Lens Light Metering</h2>
+
+  </div>
+  <p>As a small matter of history, the first 35 mm camera (non-SLR) to feature through the lens light metering may have been Nikon, with a prototype rangefinder camera, the SPX. According to the website below, the camera used Nikon 'S' type rangefinder lenses.
+
+Through-the-lens light metering is also known as "behind-the-lens metering". In the SLR design scheme, there were various placements made for the metering cells, all of which used CdS (Cadmium sulfide) photocells. </p>
+</div>
+
+<div class="bgimg-10">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color#777;background-color:#0084FF;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-left">
+
+    <h2>Semi-Automatic Exposure Capabilities</h2>
+    <p>While auto-exposure was commonly used in the early 1960s with various 35 mm fixed lens rangefinder cameras such as the Konica Auto 'S', and other cameras such as the Polaroid Land cameras whose early models used selenium cell meters, auto-exposure for interchangeable lens SLRs was a feature that was largely absent, except for a few early leaf-shutter SLRs such as the Kowa SE-R and Topcon Auto 100.
+
+   Autoexposure, technically known as semi-automatic exposure, where the camera's metering system chooses either the shutter speed or the aperture, was finally introduced by the Savoyflex and popularized by Konishiroku in the 1965 Konica Auto-Reflex. </p>
+  </div>
+  </div>
+</div>
+
+<div class="bgimg-11">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#F1F0F0;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-right">
+    <h2>Full-Program Auto-Exposure</h2>
+    <p>Full-program auto-exposure soon followed with the advent of the Canon A-1 in 1978. This SLR had a 'P' mode on the shutter speed dial, and a lock on the aperture ring to allow the lens to be put on 'Auto' mode. Other manufacturers soon followed with Nikon introducing the FA, Minolta introducing the X-700 in 1981,[4] and Pentax introducing the Super Program. Olympus, however, continued with 'aperture-priority' automation in their OM system line.</p>
+  </div>
+</div>
+</div>
+
+<div class="bgimg-12">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color#777;background-color:#0084FF;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-left">
+    <h2>Autofocus</h2>
+    <p>The Minolta Maxxum 7000, released in 1985, was the first 35 mm SLR with integrated autofocus and motorized film-advance winder, which became the standard configuration for SLR cameras from then on. This development had significant impact on the photographic industry.
+
+Some manufacturers discarded their existing lens systems to compete with other manufacturer's autofocus capability in their new cameras. This was the case for Canon, with its new EOS lens line. Other manufacturers chose to adapt their existing lens systems for autofocus capability, as was the case with Nikon and Pentax. This allowed photographers to continue using their existing lenses, which greatly reduced the cost of upgrading. For example, almost all Nikon lenses from the 1960s and later still function on the current Nikon bodies, only lacking autofocus. </p>
+  </div>
+  </div>
+</div>
+
+<div class="bgimg-13">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#F1F0F0;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-right">
+    <h2>Digital SLRs</h2>
+    <p>Canon, Nikon and Pentax have all developed digital SLR cameras (DSLRs) using the same lens mounts as on their respective film SLR cameras. Konica Minolta did the same, but in 2006 sold their camera technology to Sony, which built DSLRs based on the Minolta lens mount before abandoning the technology in favor of cameras built around a semi-transparent fixed mirror. Samsung builds DSLRs based on the Pentax lens mount. Olympus, on the other hand, chose to create a new digital-only Four Thirds System SLR standard, adopted later by Panasonic and Leica.</p>
+  </div>
+</div>
+</div>
+
+<div class="bgimg-14">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color#777;background-color:#0084FF;text-align:center;padding:300px 0px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-left">
+    <h2>Optical Components</h2>
+    <p>A cross-section (or 'side-view') of the optical components of a typical SLR camera shows how the light passes through the lens assembly (1), is reflected by the mirror (2) placed at a 45-degree angle, and is projected on the matte focusing screen (5). Via a condensing lens (6) and internal reflections in the roof pentaprism (7) the image appears in the eyepiece (8). When an image is taken, the mirror moves upwards from its resting position in the direction of the arrow, the focal plane shutter (3) opens, and the image is projected onto the film or sensor (4) in exactly the same manner as on the focusing screen.</p>
+  </div>
+  </div>
+</div>
+
+<div class="bgimg-15">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#F1F0F0;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-right">
+    <h2>Focal-Plane Shutters</h2>
+    <p>Almost all contemporary SLRs use a focal-plane shutter located in front of the film plane, which prevents the light from reaching the film even if the lens is removed, except when the shutter is actually released during the exposure. There are various designs for focal plane shutters. Early focal-plane shutters designed from the 1930s onwards usually consisted of two curtains that travelled horizontally across the film gate: an opening shutter curtain followed by a closing shutter curtain. During fast shutter speeds, the focal-plane shutter would form a 'slit' whereby the second shutter curtain was closely following the first opening shutter curtain to produce a narrow, vertical opening, with the shutter slit moving horizontally. </p>
+  </div>
+</div>
+</div>
+
+<div class="bgimg-16">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color#777;background-color:#0084FF;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-left">
+    <h2>Rotary Focal-Plane Shutter</h2>
+    <p>One unusual design, the Olympus Pen half-frame 35 mm SLR system, manufactured by Olympus in Japan, used a rotary focal-plane shutter mechanism that was extremely simple and elegant in design. This shutter used titanium foil but consisted of one piece of metal with a fixed opening, which allowed electronic flash synchronisation up to and including its maximum speed of 1/500 of a second – rivalling the capabilities of leaf-shutter systems</p>
+  </div>
+  </div>
+</div>
+
+<div class="bgimg-17">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#777;background-color:#F1F0F0;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-right">
+    <h2>Leaf Shutters</h2>
+    <p>Another shutter system is the leaf shutter, whereby the shutter is constructed of diaphragm-like blades and can be situated either between the lens or behind the lens. If the shutter is part of a lens assembly some other mechanism is required to ensure that no light reaches the film between exposures.
+
+An example of a behind-the-lens leaf shutter is found in the 35 mm SLRs produced by Kodak, with their Retina Reflex camera line; Topcon, with their Auto 100; and Kowa with their SE-R and SET-R reflexes.
+
+A primary example of a medium-format SLR with a between-the-lens leaf shutter system would be Hasselblad, with their 500C, 500CM, 500 EL-M (a motorized Hasselblad) and other models (producing a 6 cm square negative). Hasselblads use an auxiliary shutter blind situated behind the lens mount and the mirror system to prevent the fogging of film.</p>
+  </div>
+  </div>
+</div>
+
+<div class="bgimg-18">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"> </span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color#777;background-color:#0084FF;text-align:center;padding:300px 80px;text-align: justify;">
+    <div class="aos-item" data-aos="slide-left">
+    <h2>Film Formats</h2>
+
+  </div>
+  <p>Early SLRs were built for large format photography, but this film format has largely lost favor among professional photographers. SLR film-based cameras have been produced for most film formats as well as for digital formats. These film-based SLRs use the 35 mm format as, this film format offers a variety of emulsions and film sensitivity speeds, usable image quality and a good market cost. 35 mm film comes in a variety of exposure lengths: 20 exposure, 24 exposure and 36 exposure rolls. </p>
+  </div>
+</div>
+
+
+
+
+<div class="bgimg-1">
+  <div class="caption">
+  <div class="aos-item" data-aos="flip-left">
+    <span class="border">Thank You! All</span>
+</div>
+  </div>
+
+<!-- <div style="position:relative;"></div>
+<div class="bgimg-1">
+  <div class="caption">
+    <div class="aos-item" data-aos="flip-left">
+    <span class="border">Thank You! All</span>
+  </div>
+</div>
+</div> -->
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="js/backtotop.js"></script>
+<script src="js/counterconsole.js"></script>
+<script src="js/aos.js"></script>
+<script>
+  AOS.init({
+    easing: 'ease-in-out-sine'
+  });
+</script>
+</body>
+</html>
